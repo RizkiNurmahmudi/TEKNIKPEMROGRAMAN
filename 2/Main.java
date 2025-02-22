@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 // Kelas Produk merepresentasikan sebuah produk di toko
 class Produk {
-    private final String nama; // Nama produk
-    private final double harga; // Harga produk dalam USD
+    private String nama; // Nama produk
+    private double harga; // Harga produk dalam USD
 
     // Konstruktor untuk inisialisasi nama dan harga produk
     public Produk(String nama, double harga) {
@@ -16,18 +16,38 @@ class Produk {
         return nama;
     }
 
+    // Setter untuk mengubah nama produk
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
     // Getter untuk mendapatkan harga produk
     public double getHarga() {
         return harga;
+    }
+
+    // Setter untuk mengubah harga produk
+    public void setHarga(double harga) {
+        this.harga = harga;
     }
 }
 
 // Kelas Kasir untuk menangani transaksi pembelian
 class Kasir {
-    private final String namaKasir; // Nama kasir yang bertugas
+    private String namaKasir; // Nama kasir yang bertugas
 
     // Konstruktor untuk inisialisasi nama kasir
     public Kasir(String namaKasir) {
+        this.namaKasir = namaKasir;
+    }
+
+    // Getter untuk mendapatkan nama kasir
+    public String getNamaKasir() {
+        return namaKasir;
+    }
+
+    // Setter untuk mengubah nama kasir
+    public void setNamaKasir(String namaKasir) {
         this.namaKasir = namaKasir;
     }
 
